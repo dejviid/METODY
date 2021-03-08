@@ -68,6 +68,17 @@ namespace METODY
             }
             return soucet;
         }
+        //METODA7
+        bool prvocislo(int y)
+        {
+            if (y <= 1) return false;
+            if (y == 2) return true;
+            for (int i = 3; i < y; i++)
+            {
+                if (y % i == 0) return false;
+            }
+            return true;
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,6 +96,9 @@ namespace METODY
             //METODA06
             int p = Convert.ToInt32(textBox8.Text);
             label6.Text = cifLichSoucet(a).ToString();
+            //METODA7
+            int y = Convert.ToInt32(textBox9.Text);
+            label8.Text = prvocislo(y).ToString();
         }
     }
 }
