@@ -57,6 +57,18 @@ namespace METODY
             }
             return vysledek;
         }
+        //METODA6
+        int cifLichSoucet(int p)
+        {
+            int soucet = 0;
+            while (p > 0)
+            {
+                if ((p % 10) % 2 != 0) soucet += p % 10;
+                p /= 10;
+            }
+            return soucet;
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -64,12 +76,15 @@ namespace METODY
             int a1 = Convert.ToInt32(textBox1.Text), a2 = Convert.ToInt32(textBox2.Text), b1 = Convert.ToInt32(textBox3.Text), b2 = Convert.ToInt32(textBox4.Text);
             MessageBox.Show("Vzdalenost je: " + vzdalenost(a1, a2, b1, b2).ToString());
             //METODA04
-            int a = Convert.ToInt32(textBox1.Text);
-            int b = Convert.ToInt32(textBox2.Text);
+            int a = Convert.ToInt32(textBox5.Text);
+            int b = Convert.ToInt32(textBox6.Text);
             MessageBox.Show("Mocnina je: " + mocnina(a, b).ToString());
             //METODA5
-            double q = Convert.ToDouble(textBox1.Text);
+            double q = Convert.ToDouble(textBox7.Text);
             label4.Text = faktorial(q).ToString();
+            //METODA06
+            int p = Convert.ToInt32(textBox8.Text);
+            label6.Text = cifLichSoucet(a).ToString();
         }
     }
 }
