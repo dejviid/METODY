@@ -46,7 +46,17 @@ namespace METODY
 
             return vysledek;
         }
-
+        //METODA5
+        double faktorial(double q)
+        {
+            double vysledek = 1;
+            while (q > 0)
+            {
+                vysledek *= q;
+                q--;
+            }
+            return vysledek;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -57,6 +67,9 @@ namespace METODY
             int a = Convert.ToInt32(textBox1.Text);
             int b = Convert.ToInt32(textBox2.Text);
             MessageBox.Show("Mocnina je: " + mocnina(a, b).ToString());
+            //METODA5
+            double q = Convert.ToDouble(textBox1.Text);
+            label4.Text = faktorial(q).ToString();
         }
     }
 }
